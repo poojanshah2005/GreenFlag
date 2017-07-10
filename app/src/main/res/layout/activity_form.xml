@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.shahp.greenflag.Controller.Form">
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="Email Address"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/txEmail"
+        android:layout_alignStart="@+id/txEmail" />
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvEmail"
+        android:layout_alignStart="@+id/tvEmail"
+        android:layout_below="@+id/tvEmail"
+        android:layout_marginTop="82dp"
+        android:text="Password"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvPasswordConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvPassword"
+        android:layout_alignStart="@+id/tvPassword"
+        android:layout_below="@+id/tvPassword"
+        android:layout_marginTop="99dp"
+        android:text="Password Confirm"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvPasswordConfirm"
+        android:layout_alignStart="@+id/tvPasswordConfirm"
+        android:layout_below="@+id/tvPasswordConfirm"
+        android:layout_marginTop="98dp"
+        android:text="Your Password should have a minimum of 8 characters and contain one number, one uppercase and lower case letter. You can use special chararters."
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="@color/colorWhite"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/tvEmail"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/txPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txEmail"
+        android:layout_alignStart="@+id/txEmail"
+        android:layout_below="@+id/tvPassword"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorWhite"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/txPasswordConfirm"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorWhite"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:layout_below="@+id/tvPasswordConfirm"
+        android:layout_alignLeft="@+id/tvPasswordConfirm"
+        android:layout_alignStart="@+id/tvPasswordConfirm" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignEnd="@+id/txPasswordConfirm"
+        android:layout_alignLeft="@+id/tvMessage"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/txPasswordConfirm"
+        android:layout_alignStart="@+id/tvMessage"
+        android:layout_marginBottom="27dp"
+        android:onClick="nextActivity"
+        android:text="Next"
+        android:textAllCaps="false" />
+</RelativeLayout>

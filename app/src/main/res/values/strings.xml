@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GreenFlag</string>
+    <string name="msg">GreenFlag Customers can \ncreate an account to access</string>
+    <string name="msg1">Car Health updates</string>
+    <string name="msg2">Request a rescue online</string>
+    <string name="msg3">Policy Information</string>
+    <string name="title_activity_form">Form</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="title_activity_view_all_people">ViewAllPeople</string>
+</resources>

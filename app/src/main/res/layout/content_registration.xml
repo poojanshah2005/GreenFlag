@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.shahp.greenflag.Controller.Registration"
+    android:background="@color/colorPrimaryDark"
+    tools:showIn="@layout/activity_registration"
+    android:padding="15dp">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="29dp"
+        android:background="@color/colorWhite"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/etName"
+        android:layout_alignStart="@+id/etName"
+        android:layout_below="@+id/etName"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorWhite"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number" />
+
+    <Spinner
+        android:id="@+id/spCountry"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/etAge"
+        android:layout_alignLeft="@+id/etAge"
+        android:layout_alignRight="@+id/etAge"
+        android:layout_alignStart="@+id/etAge"
+        android:layout_below="@+id/etAge"
+        android:layout_marginTop="82dp"
+        android:background="@color/colorWhite" />
+
+    <RadioGroup
+        android:id="@+id/rgRender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/btnPhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender:"
+            android:textColor="@color/colorWhite" />
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorWhite"
+            android:checked="false"
+            android:onClick="onGenderSelectionCLicked"
+            android:text="Male"
+            android:textColor="@color/colorWhite" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorWhite"
+            android:checked="false"
+            android:onClick="onGenderSelectionCLicked"
+            android:text="Female"
+            android:textColor="@color/colorWhite" />
+
+        <RadioButton
+            android:id="@+id/rbOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorWhite"
+            android:onClick="onGenderSelectionCLicked"
+            android:text="Other"
+            android:textColor="@color/colorWhite" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rgRender"
+        android:layout_marginTop="21dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="@color/colorWhite"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textMultiLine" />
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/etName"
+        android:layout_toEndOf="@+id/etName"
+        android:layout_alignBottom="@+id/spCountry" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etAge"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/btnDate"
+        android:layout_toStartOf="@+id/btnDate"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/btnDate"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/tvDate"
+        android:layout_toLeftOf="@+id/ivPhoto"
+        android:text="Select Date" />
+
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:onClick="getImage"
+        android:text="Select Photo"
+        android:layout_below="@+id/ivPhoto"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
